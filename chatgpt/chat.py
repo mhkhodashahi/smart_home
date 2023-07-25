@@ -5,7 +5,7 @@ class chat:
 
     def __init__(self):
         self.openai = openai
-        self.openai.api_key = "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"
+        self.openai.api_key = "test"
 
         self._model_engine = "text-davinci-003"
 
