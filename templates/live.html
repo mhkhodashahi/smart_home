@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live</title>
+</head>
+
+
+<body>
+<div style="width: 200px">
+    <h3>First video</h3>
+    <img id="main_image_0" src="{{ url_for('images', path='frame_0.jpg') }}">
+</div>
+<div>
+    <h3>Second video</h3>
+    <img id="main_image_1" src="{{ url_for('images', path='frame_1.jpg') }}">
+</div>
+</body>
+<script>
+
+    const imgElement0 = document.querySelector('#main_image_0');
+    const imgElement1 = document.querySelector('#main_image_1');
+    function change() {
+       imgElement0.src = "{{ url_for('images', path='frame_0.jpg') }}";
+       imgElement1.src = "{{ url_for('images', path='frame_1.jpg') }}";
+    }
+
+    window.onload = function () {
+        setInterval(change, 4000);
+    };
+</script>
+</html>
